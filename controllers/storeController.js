@@ -37,7 +37,7 @@ const create_store = async (req, res) => {
           const storeData = await store.save();
           res
             .status(200)
-            .send({ success: false, msg: "Store Data", data: storeData });
+            .send({ success: true, msg: "Store Data", data: storeData });
         }
       }
     } else {

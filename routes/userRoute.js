@@ -45,5 +45,10 @@ user_route.get("/test", auth, function (req, res) {
   res.status(200).send({ success: true, msg: "Authentucated!!" });
 });
 
+//update password route
+user_route.post("/update-password", user_controller.update_password);
 
+user_route.post("/forgot-password", user_controller.forgot_password);
+
+user_route.get("/reset-password", user_controller.reset_password);
 module.exports = user_route;

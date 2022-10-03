@@ -13,7 +13,7 @@ store_route.use(express.static("public"));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    copyFile(
+    cb(
       null,
       path.join(__dirname, "../public/storeImages"),
       function (error, success) {
